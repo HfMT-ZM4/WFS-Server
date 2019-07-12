@@ -1,0 +1,25 @@
+/speaker/number 24
+/speaker/1/xy 0.0170833 4.87
+/speaker/2/xy 0.12125 4.87
+/speaker/3/xy 0.225417 4.87
+/speaker/4/xy 0.329583 4.87
+/speaker/5/xy 0.43375 4.87
+/speaker/6/xy 0.537917 4.87
+/speaker/7/xy 0.642083 4.87
+/speaker/8/xy 0.74625 4.87
+/speaker/9/xy 0.850417 4.87
+/speaker/10/xy 0.954583 4.87
+/speaker/11/xy 1.05875 4.87
+/speaker/12/xy 1.16292 4.87
+/speaker/13/xy 1.26708 4.87
+/speaker/14/xy 1.37125 4.87
+/speaker/15/xy 1.47542 4.87
+/speaker/16/xy 1.57958 4.87
+/speaker/17/xy 1.68375 4.87
+/speaker/18/xy 1.78792 4.87
+/speaker/19/xy 1.89208 4.87
+/speaker/20/xy 1.99625 4.87
+/speaker/21/xy 2.10042 4.87
+/speaker/22/xy 2.20458 4.87
+/speaker/23/xy 2.30875 4.87
+/speaker/24/xy 2.41292 4.87
