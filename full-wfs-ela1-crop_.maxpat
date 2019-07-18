@@ -39,6 +39,43 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 327.618523120880127, 301.0, 76.0, 22.0 ],
+					"text" : "target $1, $2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 327.618523120880127, 274.0, 100.0, 22.0 ],
+					"text" : "listfunnel 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 103.0, 364.0, 107.0, 22.0 ],
+					"presentation_linecount" : 2,
+					"text" : "mc.*~ 1 @chans 8"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-10",
 					"linecount" : 2,
 					"maxclass" : "newobj",
@@ -319,7 +356,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 103.0, 362.6597900390625, 95.0, 83.0 ],
+					"patching_rect" : [ 103.0, 394.6597900390625, 95.0, 83.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_type" : 0,
@@ -342,7 +379,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 816.0, 302.0, 45.0, 45.0 ]
+					"patching_rect" : [ 659.0, 341.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -1062,10 +1099,10 @@
 					"id" : "obj-58",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "FullPacket" ],
-					"patching_rect" : [ 103.0, 248.0, 243.618523120880127, 22.0 ],
-					"text" : "o.route /dsp /gain"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "FullPacket" ],
+					"patching_rect" : [ 103.0, 248.0, 355.927784681320134, 22.0 ],
+					"text" : "o.route /dsp /gain /enable"
 				}
 
 			}
@@ -1677,7 +1714,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 327.618523120880127, 302.0, 53.0, 22.0 ],
+					"patching_rect" : [ 439.618523120880127, 301.0, 53.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1950,7 +1987,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 424.618523120880127, 329.0, 81.0, 22.0 ],
+					"patching_rect" : [ 536.618523120880127, 328.0, 81.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1969,7 +2006,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "FullPacket" ],
-					"patching_rect" : [ 327.618523120880127, 275.0, 116.0, 22.0 ],
+					"patching_rect" : [ 439.618523120880127, 274.0, 116.0, 22.0 ],
 					"text" : "o.select /source"
 				}
 
@@ -3150,7 +3187,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 327.618523120880127, 329.0, 95.0, 22.0 ],
+					"patching_rect" : [ 439.618523120880127, 328.0, 95.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -4099,7 +4136,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-46", 0 ],
+					"destination" : [ "obj-45", 0 ],
 					"source" : [ "obj-30", 0 ]
 				}
 
@@ -4187,6 +4224,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-46", 0 ]
 				}
@@ -4223,6 +4267,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 1 ],
+					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-57", 1 ]
 				}
@@ -4244,6 +4302,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"source" : [ "obj-58", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-60", 0 ],
 					"source" : [ "obj-58", 0 ]
 				}
@@ -4252,7 +4317,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 0 ],
-					"source" : [ "obj-58", 2 ]
+					"source" : [ "obj-58", 3 ]
 				}
 
 			}
